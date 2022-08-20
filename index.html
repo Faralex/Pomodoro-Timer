@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img/clock.png">
+    <script src="script.js" defer></script>
+    <title>Pomodoro</title>
+</head>
+
+<body>
+    <div class="container" id='container'>
+        <div class="container-inner" id='container-inner'>
+            <h1 class="hours-title">How many hours do you want to study today for?</h1>
+            <input type='text' class="input-hours" placeholder="?" id='input-hours' maxlength='2'
+                oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
+            <div class=" pomodoro-text">
+                <h3 class="choose-pomodoro">Choose the pomodoro</h3>
+                <div class="inputs">
+                    <input class="options" id='first' type="radio" name='countdown'>
+                    <input class="options" id='second' type="radio" name='countdown'>
+                    <input class="options" id='third' type="radio" name='countdown'>
+                    <input class="options" id='fourth' type="radio" name='countdown'>
+                </div>
+                <button type='button' class="btn" id='btn'>Start the session</button>
+            </div>
+        </div>
+        <div class="text">
+            <p id='text'></p>
+        </div>
+        <div class="countdown-container">
+            <div class="minutes-c" id='minutes'></div>
+            <div class="seconds-c" id="seconds"></div>
+        </div>
+        <div class="area" id='area'>
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
